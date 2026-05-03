@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;500&display=swap');
+
+/* ---------- BASE ---------- */
+body {
+  font-family: "Inter", sans-serif;
+  background: #020617;
+  color: #e2e8f0;
+  margin: 0;
+  padding: 24px;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+}
+
+/* ---------- TITLE ---------- */
+h1 {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #61f4ff;
+  text-shadow: 0 0 8px rgba(56,189,248,0.5);
+}
+
+/* ---------- STATS ---------- */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.stats p {
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: #94a3b8;
+  position: relative;
+  overflow: hidden;
+}
+
+/* neon underline animation */
+.stats p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  transition: 0.3s;
+}
+
+.stats p:hover::after {
+  width: 100%;
+}
+
+/* ---------- FORM ---------- */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+form input {
+  padding: 14px;
+  width: 240px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #e2e8f0;
+  outline: none;
+  transition: 0.2s;
+}
+
+form input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 8px rgba(56,189,248,0.5);
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #38bdf8;
+  color: #020617;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+/* ---------- TABLE ---------- */
+table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  background: #020617;
+}
+
+/* header */
+th {
+  padding: 18px;
+  text-align: left;
+  color: #64748b;
+  border-bottom: 1px solid #1e293b;
+}
+
+/* rows */
+td {
+  padding: 20px;
+  border-bottom: 1px solid #0f172a;
+}
+
+/* hover row */
+tr:hover {
+  background: #0b1220;
+}
+
+/* ---------- SCORE INPUT ---------- */
+td input {
+  padding: 10px;
+  width: 110px;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #e2e8f0;
+  text-align: center;
+}
+
+td input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
+}
+
+/* ---------- SAVE BUTTON ---------- */
+.save-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* underline glow */
+.save-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  transition: 0.3s;
+}
+
+.save-btn:hover::after {
+  width: 100%;
+}
+
+/* hover */
+.save-btn:hover:not(:disabled) {
+  color: #38bdf8;
+}
+
+/* saved → turquoise glow */
+.save-btn:disabled {
+  background: #2dd4bf;
+  color: #022c22;
+  box-shadow: 0 0 10px #2dd4bf;
+}
+
+/* ---------- STATUS ---------- */
+td.pass {
+  color: #22c55e;
+  text-shadow: 0 0 6px rgba(34,197,94,0.5);
+}
+
+td.fail {
+  color: #ef4444;
+  text-shadow: 0 0 6px rgba(239,68,68,0.5);
+}
